@@ -1,33 +1,25 @@
 // generic types.
-
+type PayMethod = "Efectivo" | "Tarjeta" | "Pago Móvil" | "Creditos";
+type BillDenomination = 1 | 5 | 10 | 20 | 50 | 100;
 type Id = Number | RegExp;
 type FilePath = File | RegExp;
 type Mail = String | RegExp;
-
-type Donations = {
-    donationId: Id;
-    userId: Id;
-    ongId: Id;
-    date: Date;
-    ammount: Number;
-    order: Boolean;
-    ordenId?: Id;
-};
 
 type User = {
     id: Id;
     name: String;
     mail: Mail;
-    credit: Number;
-    donaciones: Array<Donations>;
-    orderHistory: Array<Orders>;
+    credit: Number; // Default to 0.0
+    donationsHistory: Array<Donations>; //Default to empty Array
+    orderHistory: Array<Orders>; //Default to empty Array
     defaultOngforDonation?: Ong;
 };
+
 type Company = {
     id: Id;
     name: String;
     description: String;
-    donations: Array<Donations>;
+    products: Array<Product>;
     img: FilePath;
 };
 
@@ -52,6 +44,9 @@ type Orders = {
     userId: Id;
     products: Array<Product>;
     date: Date;
+    payMethod: PayMethod;
+    cash: Boolean; //Default false
+    Billdenomination: BillDenomination;
     ammount: Number;
     suggestdonation: Boolean;
     donation: Boolean;
@@ -59,4 +54,12 @@ type Orders = {
     donationId?: Id;
 };
 
-type BillDenomination = 1 | 5 | 10 | 20 | 50 | 100;
+type Donations = {
+    donationId: Id;
+    userId: Id;
+    ongId: Id;
+    date: Date;
+    ammount: Number;
+    order: Boolean; // Default to false
+    orderId?: Id;
+};
