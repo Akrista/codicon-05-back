@@ -1,31 +1,29 @@
 // generic types.
 
-type Id = {
-    id: Number | RegExp;
-};
-type FilePath = {
-    filepath: File | RegExp;
-};
+type Id = Number | RegExp;
+type FilePath = File | RegExp;
+type Mail = String | RegExp;
 
 type Donations = {
     donationId: Id;
-    ammount: Number;
-    date: Date;
-    ongId: Id;
     userId: Id;
-    ordenId?: Id;
+    ongId: Id;
+    date: Date;
+    ammount: Number;
     order: Boolean;
+    ordenId?: Id;
 };
 
-type user = {
+type User = {
     id: Id;
     name: String;
-    mail: String | RegExp;
+    mail: Mail;
     credit: Number;
     donaciones: Array<Donations>;
     orderHistory: Array<Orders>;
+    defaultOngforDonation?: Ong;
 };
-type empresa = {
+type Company = {
     id: Id;
     name: String;
     description: String;
@@ -33,7 +31,7 @@ type empresa = {
     img: FilePath;
 };
 
-type ong = {
+type Ong = {
     id: Id;
     name: String;
     description: String;
@@ -45,15 +43,20 @@ type Product = {
     id: Id;
     name: String;
     description: String;
+    price: Number;
     img: File | RegExp;
 };
 type Orders = {
     orderId: Id;
-    ammount: Number;
-    date: Date;
+    companyId: Id;
     userId: Id;
-    donationId?: Id;
-    ongId?: Id;
-    donation: Boolean;
     products: Array<Product>;
+    date: Date;
+    ammount: Number;
+    suggestdonation: Boolean;
+    donation: Boolean;
+    ongId?: Id;
+    donationId?: Id;
 };
+
+type BillDenomination = 1 | 5 | 10 | 20 | 50 | 100;
