@@ -19,7 +19,8 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->name(),
             'description' => fake()->paragraph(),
-            'price' => fake()->randomFloat(2, 0, 9.99),
+            // $table->decimal('price', 2, 2); i need a faker for this
+            'price' => fake()->randomFloat(2, 0, 10),
             'image_path' => fake()->imageUrl()
         ];
     }
