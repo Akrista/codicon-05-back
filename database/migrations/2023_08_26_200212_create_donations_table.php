@@ -16,7 +16,6 @@ return new class extends Migration
             $table->decimal('amount', 10, 2);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('organization_id');
-            $table->unsignedBigInteger('order_id')->nullable();
             $table->boolean('order')->default(false);
             $table->timestamps();
         });
