@@ -10,7 +10,7 @@ class OrganizationsController extends Controller
     public function index(Request $request)
     {
         $organizations = Organization::all();
-        
-        return response()->json($organizations);       
+
+        return response()->json($organizations);
     }
 }
