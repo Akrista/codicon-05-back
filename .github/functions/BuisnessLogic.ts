@@ -1,34 +1,32 @@
+// class donation implements Donations{
+//     donationId: Id;
+//     userId: Id;
+//     ongId: Id;
+//     date: Date;
+//     ammount: number;
+//     order: boolean;
+//     orderId?: Id | undefined;
+//     constructor() {
+//         this.donationId
+//         this.userId
+//         this.ongId
+//         this.date
+//         this.ammount
+//         this.order
+//     }
+// }
 function procesPayment(order: Order) {
-    switch (order.payMethod) {
-        case "Efectivo": {
-            let orderAmmount = evaluateProductsPayment(order.products);
-            let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
-            break;
-        }
-        case "Tarjeta": {
-            let orderAmmount = evaluateProductsPayment(order.products);
-            let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
-            break;
-        }
-        case "Pago Móvil": {
-            let orderAmmount = evaluateProductsPayment(order.products);
-            let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
-        }
-        case "Creditos": {
-            let orderAmmount = evaluateProductsPayment(order.products);
-            let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
-            break;
-        }
-        default: {
-            throw console.error("Invalid PayMethod");
-            break;
-        }
+    let orderAmmount = evaluateProductsPayment(order.products);
+    let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
+    let donationAmmount = proposeDonation(subtotal);
+    let donation = new donation {
+
     }
 }
-
+    
 function evaluateProductsPayment(products: Array<Product>) {
     let total = 0;
-    for (let i = 0; i < products.length -1; i++) {
+    for (let i = 0; i < products.length - 1; i++) {
         total += products[i].price;
     }
     return total;
@@ -37,8 +35,40 @@ function evaluateProductsPayment(products: Array<Product>) {
 function evaluatSubTotal(orderAmmount: number, deliveryAmmount: number) {
     return orderAmmount + deliveryAmmount;
 }
+function proposeDonation(subtotal: number) {
+    let changeAmmount = subtotal % 10;
+    if (changeAmmount > 5) {
+        changeAmmount -= 5;
+    }
 
-function donation(donation: boolean, ong: Ong, donationAmount: number) {
-    donation? ong.id
-    
+    if (
+        changeAmmount === 0 ||
+        changeAmmount === 1 ||
+        changeAmmount === 2 ||
+        changeAmmount === 3 ||
+        changeAmmount === 4 ||
+        changeAmmount === 5
+    ) {
+        return 0;
+    } else if (changeAmmount < 1) {
+        return 1 - changeAmmount;
+    } else if (changeAmmount < 2) {
+        return 2 - changeAmmount;
+    } else if (changeAmmount < 3) {
+        return 3 - changeAmmount;
+    } else {
+        return 5 - changeAmmount;
+    }
+}
+
+function donation(
+    order: Order,
+    donation: boolean,
+    ong: Ong,
+    donationAmount: number,
+    subtotal: number
+) {
+    if (donation) {
+        order.ongId = ong.id;
+    }
 }
