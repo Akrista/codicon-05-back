@@ -178,7 +178,6 @@ Con tu donación a esta organización, puedes marcar un impacto significativo en
                 'created_at' => now(),
             ],
 
-
         ]);
     }
 }
