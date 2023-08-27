@@ -118,31 +118,31 @@ class OrganizationSeeder extends Seeder
             ],
             [
                 'name' => 'Grupo Social CESAP',
-                'description' => 'Organización que aboga por la justicia social, la equidad y la participación ciudadana en Venezuela',
+                'description' => 'Tu donación marca la diferencia en la lucha por la justicia social y la equidad en Venezuela.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'La Tierra se Calienta',
-                'description' => 'ONG que se dedica a la sensibilización y educación sobre el cambio climático y sus impactos',
+                'description' => 'Tu donación puede marcar un impacto significativo en la lucha contra el cambio climático.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Instituto Venezolano de Estudios Sociales y Políticos (INVESP)',
-                'description' => 'Organización enfocada en la investigación y análisis de temas sociales y políticos en Venezuela',
+                'description' => 'Tu donación puede tener un impacto significativo en la investigación y análisis de temas sociales y políticos en Venezuela.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Phynatura, Asociación civil',
-                'description' => 'ONG que promueve la educación y conservación ambiental a través de programas educativos y proyectos comunitarios',
+                'description' => 'Tu donación ayuda a promover la educación y conservación ambiental en Venezuela a través de programas educativos y proyectos comunitarios',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Provita',
-                'description' => 'Organización dedicada a la conservación de la biodiversidad venezolana a través de la investigación, la educación y la participación comunitaria',
+                'description' => 'Ayuda a preservar la biodiversidad venezolana a través de la investigación, educación y participación comunitaria con tu donación a esta organización.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
@@ -154,28 +154,30 @@ class OrganizationSeeder extends Seeder
             ],
             [
                 'name' => 'Todos por el Futuro',
-                'description' => 'ONG que busca promover la sostenibilidad y el desarrollo integral en Venezuela a través de proyectos y programas comunitarios',
+                'description' => 'Con tu donación, puedes promover la sostenibilidad y el desarrollo integral en Venezuela a través de proyectos y programas comunitarios.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'VerdelaTierra, A.C.',
-                'description' => 'Organización que trabaja en la educación ambiental, la reforestación y la promoción de prácticas sostenibles',
+                'description' => 'Con tu donación a esta organización, puedes promover la educación ambiental, la reforestación y la promoción de prácticas sostenibles en Venezuela.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Vitalis, A.C.',
-                'description' => 'ONG que se enfoca en la conservación y restauración de ecosistemas naturales en Venezuela',
+                'description' => 'Tu contribución puede marcar la diferencia en la lucha contra la pérdida de biodiversidad y la promoción de prácticas sostenibles en el país.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
             [
                 'name' => 'Wataniba, Grupo de Trabajo Socioambiental',
-                'description' => 'Organización que trabaja con comunidades indígenas en la conservación de sus territorios y la promoción de sus derechos socioambientales',
+                'description' => '
+Con tu donación a esta organización, puedes marcar un impacto significativo en la conservación de los territorios y la promoción de los derechos socioambientales de las comunidades indígenas en Venezuela.',
                 'image_path' => '',
                 'created_at' => now(),
             ],
+
 
         ]);
     }
