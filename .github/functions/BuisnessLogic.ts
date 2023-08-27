@@ -19,6 +19,8 @@ function procesPayment(order: Order) {
     let orderAmmount = evaluateProductsPayment(order.products);
     let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
     let donationAmmount = proposeDonation(subtotal);
+    total = finaliseorderifdonation(order, order.donation, donation.ong, donationAmmount, subtotal)
+    return finaliseorderifdonation()
 
 }
     
@@ -59,7 +61,7 @@ function proposeDonation(subtotal: number) {
     }
 }
 
-function donation(
+function finaliseorderifdonation(
     order: Order,
     donation: boolean,
     ong: Ong,
