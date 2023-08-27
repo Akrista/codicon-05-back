@@ -14,7 +14,7 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'image_path'
+        'image_path',
     ];
 
     public function store(): BelongsTo
@@ -26,6 +26,4 @@ class Product extends Model
     {
         return $this->belongsTo(Order::class);
     }
-
-
 }

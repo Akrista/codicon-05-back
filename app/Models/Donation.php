@@ -10,7 +10,6 @@ class Donation extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
         'mount',
         'user_id',
@@ -18,7 +17,6 @@ class Donation extends Model
         'order_id',
         'order',
     ];
-
 
     public function user(): BelongsTo
     {
@@ -29,5 +27,4 @@ class Donation extends Model
     {
         return $this->belongsTo(Organization::class);
     }
-
 }
