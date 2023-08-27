@@ -19,7 +19,7 @@ class StoreFactory extends Factory
         return [
             'name' => fake()->name(),
             'description' => fake()->paragraph(),
-            'image_path' => fake()->url(),
+            'image_path' => fake()->imageUrl(),
         ];
     }
 }
