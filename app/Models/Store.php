@@ -13,9 +13,8 @@ class Store extends Model
     protected $fillable = [
         'name',
         'description',
-        'image_path'
+        'image_path',
     ];
-
 
     public function products(): HasMany
     {

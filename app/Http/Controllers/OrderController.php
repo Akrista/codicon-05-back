@@ -14,12 +14,11 @@ class OrderController extends Controller
 
         $donation = $order->calculateDonation($request->cash);
 
-
-        $order->amount = 
+        $order->amount =
         $order->save();
 
         return response()->json([
-            "message" => "Thanks for donation enjoy!!!"
+            'message' => 'Thanks for donation enjoy!!!',
         ]);
     }
 }

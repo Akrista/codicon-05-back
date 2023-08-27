@@ -34,25 +34,24 @@ class Order extends Model
         return $this->hasMany(Product::class);
     }
 
-
     //public function calculateDonation($subtotal)
     //{
-        //$vuelto = $subtotal % 10;
+    //$vuelto = $subtotal % 10;
 
-        //if ($vuelto > 5) {
-            //$vuelto -= 5;
-        //}
+    //if ($vuelto > 5) {
+    //$vuelto -= 5;
+    //}
 
-        //if (in_array($vuelto, range(0, 5))) {
-            //return 0;
-        //} elseif ($vuelto < 1) {
-            //return 1 - $vuelto;
-        //} elseif ($vuelto < 2) {
-            //return 2 - $vuelto;
-        //} elseif ($vuelto < 3) {
-            //return 3 - $vuelto;
-        //} else {
-            //return 5 - $vuelto;
-        //}
+    //if (in_array($vuelto, range(0, 5))) {
+    //return 0;
+    //} elseif ($vuelto < 1) {
+    //return 1 - $vuelto;
+    //} elseif ($vuelto < 2) {
+    //return 2 - $vuelto;
+    //} elseif ($vuelto < 3) {
+    //return 3 - $vuelto;
+    //} else {
+    //return 5 - $vuelto;
+    //}
     //}
 }

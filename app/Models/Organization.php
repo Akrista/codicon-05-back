@@ -10,11 +10,10 @@ class Organization extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
         'name',
         'description',
-        'image_path'
+        'image_path',
     ];
 
     public function Donations(): HasMany
