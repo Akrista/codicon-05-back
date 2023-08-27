@@ -20,7 +20,7 @@ class ProductFactory extends Factory
             'name' => fake()->name(),
             'description' => fake()->paragraph(),
             // I need a price fake for a decimal number
-            'price' => fake()->randomFloat(2, 0, 99),
+            'price' => fake()->randomFloat(2, 0, 100),
             'image_path' => fake()->imageUrl()
         ];
     }
