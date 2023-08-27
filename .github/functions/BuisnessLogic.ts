@@ -19,9 +19,7 @@ function procesPayment(order: Order) {
     let orderAmmount = evaluateProductsPayment(order.products);
     let subtotal = evaluatSubTotal(orderAmmount, order.deliveryAmmount);
     let donationAmmount = proposeDonation(subtotal);
-    let donation = new donation {
 
-    }
 }
     
 function evaluateProductsPayment(products: Array<Product>) {
@@ -69,6 +67,10 @@ function donation(
     subtotal: number
 ) {
     if (donation) {
-        order.ongId = ong.id;
+        //create Donation(ong donationAmmount)
+        // create order 
+       return order.totalAmmount = subtotal + donationAmount
     }
+    //create order
+    return order.totalAmmount = donationAmount
 }
