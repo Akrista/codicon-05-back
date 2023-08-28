@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "GitHub.copilot",
+        "onecentlin.laravel-extension-pack",
+        "xdebug.php-debug",
+        "bmewburn.vscode-intelephense-client"
+    ]
+}
