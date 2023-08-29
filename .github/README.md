@@ -27,3 +27,6 @@ Este proyecto fue construido por un grupo multidisciplinario de jovenes Venezola
 
 El talento combinado y visión de este grupo nos ha permitido mostrar nuestra visión de una propuesta viable para el mercado de mobile apps en Venezuela donde se ofrecen beneficios a Organizaciones Sin Fines de Lucro.
 
+## Probar Backend
+
+Se requiere tener instalado [PHP 8.2]() and [Composer 2.5.8]()
